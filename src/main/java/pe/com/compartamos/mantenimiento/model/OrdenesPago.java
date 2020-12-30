@@ -85,6 +85,12 @@ public class OrdenesPago implements Serializable {
 	public void setSucursal(Sucursales sucursal) {
 		this.sucursal = sucursal;
 	}
+
+	@Override
+	public String toString() {
+		return "OrdenesPago [idOrden=" + idOrden + ", monto=" + monto + ", moneda=" + moneda + ", estado=" + estado
+				+ ", fechaRegistro=" + fechaRegistro + ", sucursal=" + sucursal + "]";
+	}
 	
 	
 }

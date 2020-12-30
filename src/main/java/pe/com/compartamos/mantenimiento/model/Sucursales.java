@@ -74,6 +74,12 @@ public class Sucursales implements Serializable {
 	public void setBanco(Banco banco) {
 		this.banco = banco;
 	}
+
+	@Override
+	public String toString() {
+		return "Sucursales [idSucursal=" + idSucursal + ", nombre=" + nombre + ", direccion=" + direccion
+				+ ", fechaRegistro=" + fechaRegistro + ", banco=" + banco + "]";
+	}
 	
 	
 

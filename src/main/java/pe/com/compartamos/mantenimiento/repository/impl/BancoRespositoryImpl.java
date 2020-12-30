@@ -39,7 +39,7 @@ public class BancoRespositoryImpl implements BancoRespository {
 			entityMgr.persist(request);
 			System.out.println("persist");
 			entityMgr.getTransaction().commit();
-			entityMgr.close();
+			//entityMgr.close();
 			response.setCodigoRespuesta("0");
 			response.setDescripcionRespuesta("Banco guardado con éxito");
 		} catch (Exception e) {
@@ -69,7 +69,7 @@ public class BancoRespositoryImpl implements BancoRespository {
 			response.setDescripcionRespuesta("Error al guardar Sucursal: " + e.getMessage());
 			System.out.println("registraSucursal: " + e.getMessage());
 		} finally {
-			entityMgr.close();
+			//entityMgr.close();
 			System.out.println(response.toString());
 		}
 		return response;
@@ -92,7 +92,7 @@ public class BancoRespositoryImpl implements BancoRespository {
 			response.setDescripcionRespuesta("Error al guardar Orden de pago: " + e.getMessage());
 			System.out.println("registraOrden: " + e.getMessage());
 		} finally {
-			entityMgr.close();
+			//entityMgr.close();
 			System.out.println(response.toString());
 		}
 		return response;
